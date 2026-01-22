@@ -11,3 +11,10 @@ keepgoing.db
 # OS
 .DS_Store
 Thumbs.db
+venv/
+__pycache__/
+*.pyc
+.keepgoing.db
+keepgoing.db
+*.db
+.env

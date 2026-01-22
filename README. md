@@ -1,5 +1,15 @@
-# KeepGoing MVP 현재 상태
+# KeepGoing MVP
+
+꾸준함은 의지가 아니라 시스템이라는 문제의식에서 출발한  
+**AI 루틴 코치 서비스 KeepGoing의 최소 기능 제품(MVP)**입니다.
+
+사용자가 포기 직전에 무너지지 않도록  
+비난 없이, 상태를 리셋하고 다시 선택할 수 있게 돕는 구조를 목표로 합니다.
+
+---
 
 ## 실행 방법 (중요)
+
 ```bash
 python -m uvicorn app.main:app --reload
+  
