@@ -145,6 +145,20 @@ def patch_routine(
 ):
     r = update_routine_title(db, routine_id, body.title)
     return to_out(r)
+@router.delete("/routines/{routine_id}", status_code=204)
+def delete_routine(
+    routine_id: int,
+    db: Session = Depends(get_db),
+):
+    r = db.query(Routine).filter(Routine.id == routine_id).first()
+    if not r:
+        raise HTTPException(status_code=404, detail="Routine not found")
+
+    db.delete(r)
+    db.commit()
+    return
+
 @router.get("/__debug_routes_loaded")
 def __debug_routes_loaded():
     return {"loaded": True}
+
