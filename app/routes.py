@@ -162,3 +162,11 @@ def delete_routine(
 def __debug_routes_loaded():
     return {"loaded": True}
 
+# ===============================
+# Character Generate
+# ===============================
+
+class CharacterGenerateRequest(BaseModel):
+    user_prompt: str
+
+

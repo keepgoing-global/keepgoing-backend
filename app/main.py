@@ -1,9 +1,11 @@
 from fastapi import FastAPI
-from .routes import router
+from .routes import router as routes_router
+from .character_routes import router as character_router
 from .db import init_db
 
 app = FastAPI()
 
-init_db()  # 서버 시작 시 SQLite DB + 테이블 생성
+init_db()
 
-app.include_router(router)
+app.include_router(routes_router)
+app.include_router(character_router)
