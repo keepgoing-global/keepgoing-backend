@@ -99,10 +99,11 @@ first_message의 마지막 문장은 반드시:
 
     # 2️⃣ 이미지 생성
     img = client.images.generate(
-        model="gpt-image-1",
-        prompt=obj["image_prompt"],
-        size="512x512",
-    )
+    model="gpt-image-1",
+    prompt=obj["image_prompt"],
+    size="auto" \
+    "",
+)
 
     b64 = img.data[0].b64_json
     avatar_data_url = f"data:image/png;base64,{b64}"
